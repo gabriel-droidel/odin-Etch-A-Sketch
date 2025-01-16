@@ -1,0 +1,68 @@
+
+/* css reset*/
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* page style*/
+
+:root {
+    --box-size: 20px;
+    --box-per-row : 16;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header{
+  padding:3rem;
+  background-color: blue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+    width: calc(var(--box-size)*var(--box-per-row));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+}
+
+.box-style{
+    width:var(--box-size);
+    height: var(--box-size);
+    background-color:red;
+}
+
+.hovered{
+    background-color: green;
+    width:var(--box-size);
+    height: var(--box-size);
+}
