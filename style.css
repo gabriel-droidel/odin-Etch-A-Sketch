@@ -46,8 +46,9 @@ header{
   justify-content: center;
   align-items: center;
 }
-.content{
-    width: calc(var(--box-size)*var(--box-per-row));
+.content,
+.content-box{
+    width: 480px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -56,8 +57,6 @@ header{
 }
 
 .box-style{
-    width:var(--box-size);
-    height: var(--box-size);
     background-color:red;
 }
 
