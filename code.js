@@ -34,12 +34,7 @@ function drawGrid(){
     const createdBoxes = document.querySelectorAll('.box-style');
     createdBoxes.forEach(box =>{
         box.addEventListener('mouseover', ()=>{
-            box.classList.add('hovered');
-        });
-    });
-    drawingBoard.addEventListener('click', ()=>{
-        createdBoxes.forEach(box =>{
-            box.removeEventListener('mouseover', ()=>{});
+            box.style.backgroundColor=getRandomColor();
         });
     });
 }
@@ -57,4 +52,11 @@ function changeGridSize(){
             keepGoing=false;
         }
     }
+}
+
+function getRandomColor(){
+        let r = Math.floor(Math.random() * 256); // Random between 0-255
+        let g = Math.floor(Math.random() * 256); // Random between 0-255
+        let b = Math.floor(Math.random() * 256); // Random between 0-255
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
 }
