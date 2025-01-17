@@ -30,11 +30,11 @@ function generateGrid(size)
 }
 
 function drawGrid(){
-    const drawingBoard =document.querySelector('.content-box')
     const createdBoxes = document.querySelectorAll('.box-style');
     createdBoxes.forEach(box =>{
         box.addEventListener('mouseover', ()=>{
             box.style.backgroundColor=getRandomColor();
+            box.style.opacity+=1;
         });
     });
 }
